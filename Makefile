@@ -2,6 +2,8 @@
 # Borland C++ IDE generated makefile
 #
 # Fixed by Reinaldo Moreira to Work under BCC55 < reimorster at gmail dot com >
+# Fixed by ols3er@gmail.com
+#
 
 .AUTODEPEND
 
@@ -21,11 +23,11 @@ BRC32   = Brc32
 #
 # Options
 #
-IDE_LFLAGS32 =  -LC:\BCC55\LIB
+IDE_LFLAGS32 =  -L"C:\Program Files (x86)\Borland\LIB"
 LLATC32_disasmdexe =  -Tpe -ap -c
 RLATC32_disasmdexe =  -w32
 BLATC32_disasmdexe = 
-CNIEAT_disasmdexe = -IC:\BCC55\INCLUDE -D
+CNIEAT_disasmdexe = -I"C:\Program Files (x86)\Borland\INCLUDE" -D
 LNIEAT_disasmdexe = -x
 LEAT_disasmdexe = $(LLATC32_disasmdexe)
 REAT_disasmdexe = $(RLATC32_disasmdexe)
@@ -51,14 +53,14 @@ Dep_disasmdexe = \
 disasm.exe : $(Dep_disasmdexe)
   $(TLINK32) @&&|
  /v $(IDE_LFLAGS32) $(LEAT_disasmdexe) $(LNIEAT_disasmdexe) +
-C:\BCC55\LIB\c0x32.obj+
+"C:\Program Files (x86)\Borland\LIB\c0x32.obj"+
 disasm.obj+
 main.obj+
 assembl.obj+
 asmserv.obj
 $<,$*
-C:\BCC55\LIB\import32.lib+
-C:\BCC55\LIB\cw32.lib
+"C:\Program Files (x86)\Borland\LIB\import32.lib"+
+"C:\Program Files (x86)\Borland\LIB\cw32.lib"
 
 |
 
